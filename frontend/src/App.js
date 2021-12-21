@@ -15,7 +15,7 @@ export default function App() {
     // should bring data using axios
     // from backend (GET / tasks)
     axios
-    .get(`http://localhost:5000`)
+    .get(`http://localhost:5000/tasks`)
     .then((response) => {
       // console.log('RESPONSE: ', response);
       console.log("DATA: ", response.data);
