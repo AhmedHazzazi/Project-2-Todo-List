@@ -139,7 +139,6 @@ app.put("/tasks/:id/:isCompleted", (req, res) => {
 
 app.delete("/tasks/:id", (req, res) => {
   // console.log("37:", req.params.id);
-
   Todo.deleteOne({ _id: req.params.id }, (err, deleteObj) => {
     if (err) {
       console.log("ERROR: ", err);
@@ -153,7 +152,6 @@ app.delete("/tasks/:id", (req, res) => {
 
 app.delete("/tasks", (req, res) => {
   // console.log("37:", req.params.id);
-
   Todo.deleteMany({ isCompleted: true }, (err, deleteObj) => {
     if (err) {
       console.log("ERROR: ", err);
