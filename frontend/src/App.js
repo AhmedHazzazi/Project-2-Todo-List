@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css';
 
 import axios from "axios";
+import Todo from "./components/Todo";
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
-  
+
+  useEffect(() => {
+    getData()
+  },[])
+
   const getData = () => {
     // should bring data using axios
     // from backend (GET / tasks)
