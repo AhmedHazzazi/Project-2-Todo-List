@@ -59,10 +59,6 @@ app.get("/not_completed", (req, res) => {
 });
 */
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d211eeba1de2d60f8d77ddd4b816c68dff9d7059
 app.post("/tasks", (req, res) => {
   console.log('25:',req.body);
   Todo.create(req.body, (err, newTask) => {
