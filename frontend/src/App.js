@@ -26,7 +26,7 @@ export default function App() {
     });
   };
   const mapOverTasks = tasks.map((taskObj, i) => {
-    return <p>{taskObj.title}</p>
+    return <Todo key={i} task={taskObj} />
   });
   
   return (

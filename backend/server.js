@@ -79,8 +79,8 @@ app.delete("/tasks/:id", (req, res) => {
       console.log("ERROR: ", err);
     } else {
       deleteObj.deletedCount === 1
-        ? res.json("Delete one todo successfully")
-        : res.status(404).json("This todo is not found");
+        ? res.json("Delete One Todo Successfully")
+        : res.status(404).json("This Todo Is Not Found");
     }
   });
 });
@@ -93,8 +93,8 @@ app.delete("/tasks", (req, res) => {
     } else {
       console.log(deleteObj);
       deleteObj.deletedCount === 0
-        ? res.status(404).json("There is no completed todo found")
-        : res.json("Delete all completed todos successfully");
+        ? res.status(404).json("There Is No Completed Todo Found")
+        : res.json("Delete All Completed Todos Successfully");
     }
   });
 });
@@ -111,8 +111,8 @@ app.put("/tasks/:id", (req, res) => {
       } else {
         console.log(updateObj);
         updateObj.modifiedCount === 1
-          ? res.json("Update one todo successfully")
-          : res.status(404).json("This todo is not found");
+          ? res.json("Update One Todo Successfully")
+          : res.status(404).json("This Todo Is Not Found");
       }
     }
   );
@@ -130,15 +130,11 @@ app.put("/tasks/:id/:isCompleted", (req, res) => {
       } else {
         console.log(updateObj);
         updateObj.modifiedCount === 1
-          ? res.json("Update one todo successfully")
-          : res.status(404).json("This todo is not found");
+          ? res.json("Update One Todo Successfully")
+          : res.status(404).json("This Todo Is Not Found");
       }
     }
   );
-});
-
-app.listen(5001, () => {
-  console.log("SERVER IS WORKING ..");
 });
 
 app.delete("/tasks/:id", (req, res) => {
@@ -149,8 +145,8 @@ app.delete("/tasks/:id", (req, res) => {
       console.log("ERROR: ", err);
     } else {
       deleteObj.deletedCount === 1
-        ? res.json("Delete one todo successfully")
-        : res.status(404).json("This todo is not found");
+        ? res.json("Delete One Todo Successfully")
+        : res.status(404).json("This Todo Is Not Found");
     }
   });
 });
@@ -164,8 +160,8 @@ app.delete("/tasks", (req, res) => {
     } else {
       console.log(deleteObj);
       deleteObj.deletedCount === 0
-        ? res.status(404).json("There is no completed todo found")
-        : res.json("Delete all completed todos successfully");
+        ? res.status(404).json("There Is No Completed Todo Found")
+        : res.json("Delete All Completed Todos Successfully");
     }
   });
 });
@@ -182,8 +178,8 @@ app.put("/tasks/:id", (req, res) => {
       } else {
         console.log(updateObj);
         updateObj.modifiedCount === 1
-          ? res.json("Update one todo successfully")
-          : res.status(404).json("This todo is not found");
+          ? res.json("Update One Todo Successfully")
+          : res.status(404).json("This Todo Is Not Found");
       }
     }
   );
@@ -201,8 +197,8 @@ app.put("/tasks/:id/:isCompleted", (req, res) => {
       } else {
         console.log(updateObj);
         updateObj.modifiedCount === 1
-          ? res.json("Update one todo successfully")
-          : res.status(404).json("This todo is not found");
+          ? res.json("Update One Todo Successfully")
+          : res.status(404).json("This Todo Is Not Found");
       }
     }
   );
