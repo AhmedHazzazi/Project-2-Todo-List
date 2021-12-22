@@ -5,7 +5,7 @@ export default function Todo(props) {
   const { _id, title, isCompleted } = props.task
   return (
     <div className=''>
-      <table className='table '>
+      <table className='table table-bordered'>
         <tbody>
           <tr>
             <td>

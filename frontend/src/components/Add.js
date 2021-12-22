@@ -11,10 +11,18 @@ export default function Add(props) {
   };
 
   return (
-    <div className="card card-body my-3">
-      <input type="text" placeholder="Write new title here ..." onChange={(e) => { setNewTitle(e.target.value); }} />
-      <input type="checkbox" checked={isCompleted} onChange={(e) => {setisCompleted(e.target.checked ? false : true);}} />
-      <button className="btn btn-block btn-success mt-3" onClick={createNewTodo}>Create New Todo</button>
-    </div>
+    <form className="row row-cols-lg-auto g-3 align-items-center">
+      <div className="col-12">
+        <input type="text" placeholder="Write new title here ..." onChange={(e) => { setNewTitle(e.target.value); }} />
+      </div>
+
+      <div className="col-12">
+        {/* <input type="checkbox" checked={isCompleted} onChange={(e) => { setisCompleted(e.target.checked ? false : true); }} /> */}
+      </div>
+
+      <div className="col-12">
+        <button className="btn btn-block btn-success mt-3" onClick={createNewTodo}>Create New Todo</button>
+      </div>
+    </form>
   );
 }
