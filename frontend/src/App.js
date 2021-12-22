@@ -104,7 +104,7 @@ export default function App() {
       <div className='bg-primary'>ADD TODO</div>
       <Add createFunc={postNewTodo} />
       
-      <button onClick={getData}>GET TASKS</button>
+      <label className='form-label'>GET ALL TODO: </label> <button onClick={getData}>GET TASKS</button>
       
       <div className='bg-danger my-3'>TODO LIST</div>
       {mapOverTasks}

@@ -13,7 +13,7 @@ export default function Add(props) {
   return (
     <form className="row row-cols-lg-auto g-3 align-items-center">
       <div className="col-12">
-        <input type="text" placeholder="Write new title here ..." onChange={(e) => { setNewTitle(e.target.value); }} />
+        <input type="text" className="form-label" placeholder="Write new title here ..." onChange={(e) => { setNewTitle(e.target.value); }} />
       </div>
 
       <div className="col-12">
