@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 export default function Add(props) {
-  const [newTitle, setNewTitle, isCompleted, setisCompleted] = useState("");
+  const [newTitle, setNewTitle] = useState("");
+  const [isCompleted, setisCompleted] = useState("");
+
 
   const createNewTodo = () => {
     //
@@ -13,11 +15,13 @@ export default function Add(props) {
   return (
     <form className="row row-cols-lg-auto g-3 align-items-center">
       <div className="col-12">
-        <input type="text" className="form-label" placeholder="Write new title here ..." onChange={(e) => { setNewTitle(e.target.value); }} />
+      <label className="" for="txt_title">Title:</label>
+        <input id="txt_title" type="text" className="form-label" placeholder="Write new title here ..." onChange={(e) => { setNewTitle(e.target.value); }} />
       </div>
 
       <div className="col-12">
-        {/* <input type="checkbox" checked={isCompleted} onChange={(e) => { setisCompleted(e.target.checked ? false : true); }} /> */}
+        <input id="isCompletedChecked" type="checkbox" value="" className="form-check-input" onChange={(e) => { setisCompleted(e.target.checked.value ? false : true); }} />
+        <label class="form-check-label" for="isCompletedChecked">isCompleted</label>
       </div>
 
       <div className="col-12">
