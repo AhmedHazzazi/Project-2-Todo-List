@@ -106,7 +106,7 @@ export default function App() {
       
       <button onClick={getData}>GET TASKS</button>
       
-      <div className='bg-danger'>TODO LIST</div>
+      <div className='bg-danger my-3'>TODO LIST</div>
       {mapOverTasks}
       </div>
     </div>
