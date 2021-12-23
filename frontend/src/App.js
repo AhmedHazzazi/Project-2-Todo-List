@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Todo from "./components/Todo";
 import Add from "./components/Add";
@@ -120,20 +120,32 @@ export default function App() {
   ));
   
   return (
-    <div className='app'>
-      <p>app</p>
-      {/* when click on this button 
+    // <div className='app'>
+    //   <p>app</p>
+      
+    // </div>
+    <div className="container">
+    <div className="row">
+      <div className="col-10 mx-auto col-md-8 mt-5">
+        <h3 className="text-capitalize text-center">todo input</h3>
+        {/* when click on this button 
       should call function bring Data */}
-      <div>ADD TODO</div>
+      <div className='bg-primary'>ADD TODO</div>
       <Add createFunc={postNewTodo} />
       
-      <button onClick={getData}>GET TASKS</button>
-      <button onClick={deleteTasks}>DELETE Completed tasks </button>
-      <button onClick={() => { filterData(true); }}> GET DONE </button>
-      <button onClick={() => { filterData(false); }}> GET PENDING </button>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button className='mx-3' onClick={getData}>GET TASKS</button>
+        <button className='mx-3' onClick={deleteTasks}>DELETE Completed tasks </button>
+        <button className='mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
+        <button className='mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
+      </div>
+
       
-      <div>TODO LIST</div>
+      
+      <div className='bg-danger my-3'>TODO LIST</div>
       {mapOverTasks}
+      </div>
     </div>
+  </div>
   );
 }
