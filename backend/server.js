@@ -9,6 +9,22 @@ const Todo = require("./todo");
 app.use(express.json());
 app.use(cors());
 
+// use uuid and array if mongoDB didn't work for you
+const arrServer = [
+  {
+    _id: "61c420a96096f17c23ba1ab7",
+    title: "444444444",
+    isCompleted: false,
+    __v: 0,
+  },
+  {
+    _id: "61c420ac6096f17c23ba1abd",
+    title: "5555555555555",
+    isCompleted: true,
+    __v: 0,
+  },
+];
+
 app.get("/", (req, res) => {
   res.json("GET / is Working");
 });
@@ -16,6 +32,9 @@ app.get("/", (req, res) => {
 // CRUD: Create, Read, Update, Delete
 
 app.get("/tasks", (req, res) => {
+  // use this if mongoDB didn't work for you
+  // res.json(arrServer);
+
   Todo.find({}, (err, data) => {
     if (err) {
       console.log("ERROR: ", err);
@@ -24,6 +43,16 @@ app.get("/tasks", (req, res) => {
     }
   });
 });
+// Old Coding for app.get
+/* app.get("/tasks", (req, res) => {
+  Todo.find({}, (err, data) => {
+    if (err) {
+      console.log("ERROR: ", err);
+    } else {
+      res.json(data);
+    }
+  });
+}); */
 
 //              ?key=value&key=value
 app.get("/filter", (req, res) => {
@@ -62,7 +91,7 @@ app.get("/not_completed", (req, res) => {
 */
 
 app.post("/tasks", (req, res) => {
-  console.log('25:',req.body);
+  // console.log('25:',req.body);
   Todo.create(req.body, (err, newTask) => {
     if (err) {
       console.log("ERROR: ", err);

@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 export default function Add(props) {
   const [newTitle, setNewTitle] = useState("");
-  const [isCompleted, setisCompleted] = useState("");
+  const [isCompleted, setCompleted] = useState("");
 
 
   const createNewTodo = () => {
     //
     console.log("createNewTodo from ADD");
     // {"title":"task 5","isCompleted": false}
-    props.createFunc({ title: newTitle, isCompleted: setisCompleted });
+    props.createFunc({ title: newTitle, isCompleted: setCompleted });
   };
 
   return (
