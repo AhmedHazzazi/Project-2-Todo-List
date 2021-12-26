@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Todo from "./components/Todo";
 import Add from "./components/Add";
+import Register from "./components/Register";
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
@@ -140,7 +141,7 @@ export default function App() {
         <button className='mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
       </div>
 
-      
+      <Register />
       
       <div className='bg-danger my-3'>TODO LIST</div>
       {mapOverTasks}
