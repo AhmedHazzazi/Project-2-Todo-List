@@ -4,9 +4,9 @@
 .Todo {
   border: blue solid 3px;
 }
-/* .Todo span {
+.Todo span {
   margin: 0px 10px 0px 10px;
-} */
+}
 .Todo, .Login {
   border: blue solid 3px;
 }

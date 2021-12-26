@@ -28,38 +28,38 @@ export default function Register() {
 
   return (
     <div className="Register">
-      <form action="">
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          placeholder="Write email here ..."
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          value={email}
-        />
-        <br />
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          placeholder="Write password here ..."
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          value={password}
-        />
-        <br />
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          placeholder="Write username here ..."
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-          value={username}
-        />
-        <br />
-        <input type="submit" value="Register" onClick={registerFunc} />
+      <form action="" className="row">
+        <div className="col-auto">
+          <label className="form-label" htmlFor="email">Email:</label>
+          <input className="form-control" type="email" placeholder="Write email here ..."
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            value={email}
+          />
+        </div>
+        <div className="col-auto">
+          <label className="form-label" htmlFor="password">Password:</label>
+          <input className="form-control" type="password" placeholder="Write password here ..."
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            value={password}
+          />
+        </div>
+        <div className="col-auto">
+          <label className="form-label" htmlFor="username">Username:</label>
+          <input className="form-control" type="text" placeholder="Write username here ..."
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            value={username}
+          />
+        </div>
+        <div class="col-auto">
+          <input className="btn btn-dark my-3 mx-3" type="submit" value="Register" onClick={registerFunc} />
+        </div>
+        
       </form>
     </div>
   );
