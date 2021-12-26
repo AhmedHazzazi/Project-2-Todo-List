@@ -28,34 +28,33 @@ export default function Register() {
 
   return (
     <div className="Register">
-      <form action="" className="row">
-        <div className="col-auto">
-          <label className="form-label" htmlFor="email">Email:</label>
-          <input className="form-control" type="email" placeholder="Write email here ..."
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            value={email}
-          />
+      <form action="">
+        <div  className="row my-3">
+          <div className="col-auto mx-3">
+            <label className="form-label" htmlFor="email">Email:</label>
+          </div>
+          <div className="col-auto mx-4">
+            <input className="form-control" type="email" placeholder="Write email here ..." onChange={(e) => { setEmail(e.target.value); }} value={email} />
+          </div>
         </div>
-        <div className="col-auto">
-          <label className="form-label" htmlFor="password">Password:</label>
-          <input className="form-control" type="password" placeholder="Write password here ..."
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            value={password}
-          />
+        
+        <div className="row my-3">
+          <div className="col-auto mx-3">
+            <label className="form-label" htmlFor="password">Password:</label>
+          </div>
+          <div className="col-auto">
+            <input className="form-control" type="password" placeholder="Write password here ..." onChange={(e) => { setPassword(e.target.value); }} value={password} />
+          </div>
         </div>
-        <div className="col-auto">
-          <label className="form-label" htmlFor="username">Username:</label>
-          <input className="form-control" type="text" placeholder="Write username here ..."
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
-            value={username}
-          />
+        <div className="row my-3">
+          <div className="col-auto mx-3">
+            <label className="form-label" htmlFor="username">Username:</label>
+          </div>
+          <div className="col-auto">
+            <input className="form-control" type="text" placeholder="Write username here ..." onChange={(e) => { setUsername(e.target.value); }} value={username} />
+          </div>
         </div>
+        
         <div class="col-auto">
           <input className="btn btn-dark my-3 mx-3" type="submit" value="Register" onClick={registerFunc} />
         </div>

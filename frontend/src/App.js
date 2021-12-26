@@ -135,7 +135,7 @@ export default function App() {
       <Add createFunc={postNewTodo} />
       
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button className='btn btn-primary my-3 mx-3' onClick={getData}>GET TASKS</button>
+        <button className='btn btn-primary my-3 mx-3' onClick={getData}>GET ALL TASKS</button>
         <button className='btn btn-danger my-3 mx-3' onClick={deleteTasks}>DELETE Completed tasks </button>
         <button className='btn btn-success my-3 mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
         <button className='btn btn-dark my-3 mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
