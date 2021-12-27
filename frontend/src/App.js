@@ -128,10 +128,9 @@ export default function App() {
     <div className="container">
     <div className="row">
       <div className="col-10 mx-auto col-md-8 mt-5">
-        <h3 className="text-capitalize text-center">todo input</h3>
         {/* when click on this button 
       should call function bring Data */}
-      <div className='bg-primary'>ADD TODO</div>
+      <div className='text-center bg-primary my-3'>ADD TODO</div>
       <Add createFunc={postNewTodo} />
       
       <div class="btn-group" role="group" aria-label="Basic example">
@@ -141,10 +140,10 @@ export default function App() {
         <button className='btn btn-dark my-3 mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
       </div>
 
+      <div className='text-center bg-primary my-3'>REGISTER USER</div>
       <Register />
       
-      <div className='bg-danger my-3'>TODO LIST</div>
-      
+      <div className='text-center bg-danger my-3'>TODO LIST</div>
       <table className='table table-bordered table-striped'>
       <thead>
             <tr>

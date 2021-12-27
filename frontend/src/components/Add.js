@@ -12,7 +12,7 @@ export default function Add(props) {
   };
 
   return (
-    <div className="Add my-3">
+    <div className="Add">
         <form className="row row-cols-lg-auto g-3 align-items-center">
           <div className="col">
             <label className="form-label mx-3" for="txt_title">Title:</label>
