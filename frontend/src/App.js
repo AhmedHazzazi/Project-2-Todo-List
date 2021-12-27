@@ -144,7 +144,17 @@ export default function App() {
       <Register />
       
       <div className='bg-danger my-3'>TODO LIST</div>
-      {mapOverTasks}
+      
+      <table className='table table-bordered table-striped'>
+      <thead>
+            <tr>
+                <th>IsCompleted</th>
+                <th>TITLE</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+          {mapOverTasks}
+      </table>
       </div>
     </div>
   </div>

@@ -29,7 +29,7 @@ export default function Register() {
   return (
     <div className="Register">
       <form action="">
-        <div  className="row my-3">
+        <div className="row my-3">
           <div className="col-auto mx-3">
             <label className="form-label" htmlFor="email">Email:</label>
           </div>
@@ -37,7 +37,7 @@ export default function Register() {
             <input className="form-control" type="email" placeholder="Write email here ..." onChange={(e) => { setEmail(e.target.value); }} value={email} />
           </div>
         </div>
-        
+
         <div className="row my-3">
           <div className="col-auto mx-3">
             <label className="form-label" htmlFor="password">Password:</label>
@@ -46,6 +46,7 @@ export default function Register() {
             <input className="form-control" type="password" placeholder="Write password here ..." onChange={(e) => { setPassword(e.target.value); }} value={password} />
           </div>
         </div>
+        
         <div className="row my-3">
           <div className="col-auto mx-3">
             <label className="form-label" htmlFor="username">Username:</label>
@@ -54,11 +55,11 @@ export default function Register() {
             <input className="form-control" type="text" placeholder="Write username here ..." onChange={(e) => { setUsername(e.target.value); }} value={username} />
           </div>
         </div>
-        
+
         <div class="col-auto">
           <input className="btn btn-dark my-3 mx-3" type="submit" value="Register" onClick={registerFunc} />
         </div>
-        
+
       </form>
     </div>
   );
