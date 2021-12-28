@@ -127,42 +127,44 @@ export default function App() {
     <div className="container App">
       <p>Name: {username}</p>
 
-      <nav className=''ss="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-        <a className="navbar-brand" href="#"> Todos </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to="/home" className="nav-link">
-                  Home
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link to="/login" className="nav-link">
-                  Login
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link to="/register" className="nav-link">
-                  Register
-                </Link>
-              </li>
-            </ul>
+      <div className="row">
+        <nav className=''ss="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container-fluid">
+          <a className="navbar-brand" href="#"> Todos </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link to="/home" className="nav-link">
+                    Home
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/login" className="nav-link">
+                    Login
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/register" className="nav-link">
+                    Register
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-      <br />
+        </nav>
+      </div>
+      
       <button className="btn btn-primary m-3" onClick={logoutFunc}>Logout</button>
       <div className="row">
       <Routes>
