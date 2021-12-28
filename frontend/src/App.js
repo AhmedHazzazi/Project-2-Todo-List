@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react'
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import { Routes, Route, Link } from "react-router-dom";
 import Todo from "./components/Todo";
 import Add from "./components/Add";
 import Register from "./components/Register";
+import Login from "./components/Login";
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
     getData()
@@ -121,58 +125,51 @@ export default function App() {
   ));
   
   return (
-    // <div className='app'>
-    //   <p>app</p>
-      
-    // </div>
-    <div className="container">
-    <div className="row">
-      <div className="col-10 mx-auto col-md-8 mt-5">
-        {/* when click on this button 
-<<<<<<< Updated upstream
-      should call function bring Data */}
-      <div className='text-center bg-primary my-3'>ADD TODO</div>
-      <Add createFunc={postNewTodo} />
-      
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button className='btn btn-primary my-3 mx-3' onClick={getData}>GET ALL TASKS</button>
-        <button className='btn btn-danger my-3 mx-3' onClick={deleteTasks}>DELETE Completed tasks </button>
-        <button className='btn btn-success my-3 mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
-        <button className='btn btn-dark my-3 mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
-      </div>
+    <div className="container App">
+      <div className="row">
+        <p>Name: {username}</p>
 
-      <div className='text-center bg-primary my-3'>REGISTER USER</div>
-      <Register />
-      
-      <div className='text-center bg-danger my-3'>TODO LIST</div>
-      <table className='table table-bordered table-striped'>
-      <thead>
-            <tr>
-                <th>IsCompleted</th>
-                <th>TITLE</th>
-                <th>Options</th>
-            </tr>
-        </thead>
-          {mapOverTasks}
-      </table>
-=======
-        should call function bring Data */}
-        <div className='bg-primary'>ADD TODO</div>
-        <Add createFunc={postNewTodo} />
-        
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button className='mx-3' onClick={getData}>GET TASKS</button>
-          <button className='mx-3' onClick={deleteTasks}>DELETE Completed tasks </button>
-          <button className='mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
-          <button className='mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
-        </div>
-
-        
-        
-        <div className='bg-danger my-3'>TODO LIST</div>
-        {mapOverTasks}
->>>>>>> Stashed changes
+        <nav>
+          <Link to="/home">Home</Link> {" | "}
+          <Link to="/login">Login</Link> {" | "}
+          <Link to="/register">Register</Link>
+        </nav>
       </div>
+      <div className="row">
+      <Routes>
+        <Route
+            path="/home"
+            element={
+              <div className="Home">
+                <Add createFunc={postNewTodo} />
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button className='btn btn-primary my-3 mx-3' onClick={getData}>GET ALL TASKS</button>
+                  <button className='btn btn-danger my-3 mx-3' onClick={deleteTasks}>DELETE Completed tasks </button>
+                  <button className='btn btn-success my-3 mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
+                  <button className='btn btn-dark my-3 mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
+                </div>
+                <div className='text-center bg-danger my-3'>TODO LIST</div>
+                <table className='table table-bordered table-striped'>
+                <thead>
+                    <tr>
+                      <th>IsCompleted</th>
+                      <th>TITLE</th>
+                      <th>Options</th>
+                    </tr>
+                  </thead>
+                  {mapOverTasks}
+                </table>
+              </div>
+            }
+          />
+        <Route
+          path="/login"
+          element={
+            <Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />
+          }
+        />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </div>
   </div>
   );

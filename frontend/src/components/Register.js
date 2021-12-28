@@ -29,6 +29,7 @@ export default function Register() {
   return (
     <div className="Register">
       <form action="">
+      <div className='text-center bg-success my-3'>Register</div>
         <div className="row my-3">
           <div className="col-auto mx-3">
             <label className="form-label" htmlFor="email">Email:</label>
