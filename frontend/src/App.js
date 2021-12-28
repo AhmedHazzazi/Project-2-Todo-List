@@ -129,6 +129,7 @@ export default function App() {
     <div className="row">
       <div className="col-10 mx-auto col-md-8 mt-5">
         {/* when click on this button 
+<<<<<<< Updated upstream
       should call function bring Data */}
       <div className='text-center bg-primary my-3'>ADD TODO</div>
       <Add createFunc={postNewTodo} />
@@ -154,6 +155,23 @@ export default function App() {
         </thead>
           {mapOverTasks}
       </table>
+=======
+        should call function bring Data */}
+        <div className='bg-primary'>ADD TODO</div>
+        <Add createFunc={postNewTodo} />
+        
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button className='mx-3' onClick={getData}>GET TASKS</button>
+          <button className='mx-3' onClick={deleteTasks}>DELETE Completed tasks </button>
+          <button className='mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
+          <button className='mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
+        </div>
+
+        
+        
+        <div className='bg-danger my-3'>TODO LIST</div>
+        {mapOverTasks}
+>>>>>>> Stashed changes
       </div>
     </div>
   </div>
