@@ -89,7 +89,6 @@ export default function Login(props) {
             onClick={loginFunc}
             className="btn btn-primary"
           />
-
           <Link to="/Register" className="btn btn-link">
             Don't Have An Account?
           </Link>

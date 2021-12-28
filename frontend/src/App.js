@@ -125,8 +125,10 @@ export default function App() {
   
   return (
     <div className="container App">
-      <p>Name: {username}</p>
-
+      <div className="row">
+        <p>Name: {username}</p>
+      </div>
+      
       <div className="row">
         <nav className=''ss="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
@@ -179,7 +181,7 @@ export default function App() {
                   <button className='btn btn-success my-3 mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
                   <button className='btn btn-dark my-3 mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
                 </div>
-                <div className='text-center bg-danger my-3'>TODO LIST</div>
+                <h3 className='text-center bg-danger m-3'>TODO LIST</h3>
                 <table className='table table-bordered table-striped'>
                   <thead>
                     <tr>
