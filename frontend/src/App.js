@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
-// import "bootstrap/dist/css/bootstrap.min.css";
+
 import axios from "axios";
 import { Routes, Route, Link } from "react-router-dom";
+
 import Todo from "./components/Todo";
 import Add from "./components/Add";
 import Register from "./components/Register";
@@ -14,8 +15,8 @@ export default function App() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    getData()
-  },[])
+    getData();
+  },[]);
 
   const getData = () => {
     // should bring data using axios
@@ -128,7 +129,7 @@ export default function App() {
 
       <nav className=''ss="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className='navbar-brand' href="#"> Todos </a>
+        <a className="navbar-brand" href="#"> Todos </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -162,7 +163,7 @@ export default function App() {
         </div>
       </nav>
       <br />
-      <button onClick={logoutFunc}>Logout</button>
+      <button className="btn btn-primary m-3" onClick={logoutFunc}>Logout</button>
       <div className="row">
       <Routes>
         <Route

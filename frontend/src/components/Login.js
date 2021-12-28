@@ -3,8 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function Login(props) {
-  const [email, setEmail] = useState("m.jouza3@gmail.com");
-  const [password, setPassword] = useState("1234");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const loginFunc = (e) => {
     e.preventDefault();
@@ -26,7 +26,7 @@ export default function Login(props) {
   };
 
   return (
-    <div className="m-3">
+    <div className="Login">
       {/* <div className="Login"> */}
       {/* 
       <form action="">
@@ -55,13 +55,13 @@ export default function Login(props) {
         <Link to="/Register">Don't Have An Account?</Link>
       </form> 
       */}
-      <form>
+      <form className="m-3">
         <div className="form-floating mb-3">
           <input
             type="email"
             className="form-control"
             id="floatingInput"
-            // placeholder="name@example.com"
+            placeholder="name@example.com"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -74,7 +74,7 @@ export default function Login(props) {
             type="password"
             className="form-control"
             id="floatingPassword"
-            // placeholder="Write password here ..."
+            placeholder="Write password here ..."
             onChange={(e) => {
               setPassword(e.target.value);
             }}
