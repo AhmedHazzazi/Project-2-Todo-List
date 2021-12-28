@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { Routes, Route, Link } from "react-router-dom";
 import Todo from "./components/Todo";
@@ -107,14 +107,12 @@ export default function App() {
         console.log("ERR: ", err);
       });
   };
-  // const mapOverTasks = tasks.map((taskObj, i) => {
-  //   return <Todo key={i} task={taskObj} />
-  // });
-
-  // const mapOverTasks = tasks.map((taskObj, i) => (
-  //   <Todo key={i} task={taskObj} deleteTodo={deleteTodo}/>
-  // ));
   
+  const logoutFunc = () => {
+    setIsLoggedIn(false);
+    setUsername("");
+  };
+
   const mapOverTasks = tasks.map((taskObj, i) => (
     <Todo
       key={taskObj._id}
@@ -126,15 +124,45 @@ export default function App() {
   
   return (
     <div className="container App">
-      <div className="row">
-        <p>Name: {username}</p>
+      <p>Name: {username}</p>
 
-        <nav>
-          <Link to="/home">Home</Link> {" | "}
-          <Link to="/login">Login</Link> {" | "}
-          <Link to="/register">Register</Link>
-        </nav>
-      </div>
+      <nav className=''ss="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <a className='navbar-brand' href="#"> Todos </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to="/home" className="nav-link">
+                  Home
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/login" className="nav-link">
+                  Login
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/register" className="nav-link">
+                  Register
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br />
+      <button onClick={logoutFunc}>Logout</button>
       <div className="row">
       <Routes>
         <Route
@@ -150,7 +178,7 @@ export default function App() {
                 </div>
                 <div className='text-center bg-danger my-3'>TODO LIST</div>
                 <table className='table table-bordered table-striped'>
-                <thead>
+                  <thead>
                     <tr>
                       <th>IsCompleted</th>
                       <th>TITLE</th>
