@@ -13,7 +13,7 @@ export default function Add(props) {
 
   return (
     <div className="Add">
-      <h3 className='text-center bg-primary m-3'>ADD TODO</h3>
+      <h3 className='text-center bg-primary m-3 p-2'>ADD TODO</h3>
       <form className="row row-cols-lg-auto g-3 align-items-center">
         <div className="col">
           <label className="form-label mx-3" for="txt_title">Title:</label>

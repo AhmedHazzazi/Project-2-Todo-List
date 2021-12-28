@@ -132,7 +132,7 @@ export default function App() {
       <div className="row">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-          <a className="navbar-brand" href="#"> Todos </a>
+          <a className="navbar-brand" href="home"> Todos </a>
             <button
               className="navbar-toggler"
               type="button"
@@ -167,7 +167,7 @@ export default function App() {
         </nav>
       </div>
       
-      <button className="btn btn-primary m-3" onClick={logoutFunc}>Logout</button>
+      <button className="btn btn-danger m-3" onClick={logoutFunc}>Logout</button>
       <div className="row">
       <Routes>
         <Route
@@ -181,7 +181,7 @@ export default function App() {
                   <button className='btn btn-success my-3 mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
                   <button className='btn btn-dark my-3 mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
                 </div>
-                <h3 className='text-center bg-danger m-3'>TODO LIST</h3>
+                <h3 className='text-center bg-danger m-3 p-2'>TODO LIST</h3>
                 <table className='table table-bordered table-striped'>
                   <thead>
                     <tr>

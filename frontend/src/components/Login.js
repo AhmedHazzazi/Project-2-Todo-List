@@ -27,6 +27,7 @@ export default function Login(props) {
 
   return (
     <div className="Login">
+
       {/* <div className="Login"> */}
       {/* 
       <form action="">
@@ -56,6 +57,7 @@ export default function Login(props) {
       </form> 
       */}
       <form className="m-3">
+      <h3 className='text-center bg-primary m-3 p-2'>Login</h3>
         <div className="form-floating mb-3">
           <input
             type="email"
