@@ -128,9 +128,9 @@ export default function App() {
       <div className="row">
         <p>Name: {username}</p>
       </div>
-      
+
       <div className="row">
-        <nav className=''ss="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
           <a className="navbar-brand" href="#"> Todos </a>
             <button
@@ -142,7 +142,7 @@ export default function App() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
@@ -175,7 +175,7 @@ export default function App() {
             element={
               <div className="Home">
                 <Add createFunc={postNewTodo} />
-                <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="btn-group">
                   <button className='btn btn-primary my-3 mx-3' onClick={getData}>GET ALL TASKS</button>
                   <button className='btn btn-danger my-3 mx-3' onClick={deleteTasks}>DELETE Completed tasks </button>
                   <button className='btn btn-success my-3 mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
