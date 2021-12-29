@@ -124,7 +124,7 @@ export default function App() {
   ));
   
   return (
-    <div className="container App">
+    <div className="container">
       <div className="row">
         <p>Name: {username}</p>
       </div>
@@ -167,7 +167,22 @@ export default function App() {
         </nav>
       </div>
       
-      <button className="btn btn-danger m-3" onClick={logoutFunc}>Logout</button>
+      {/* <button className="btn btn-danger m-3" onClick={logoutFunc}>Logout</button> */}
+      <div className="m-3 text-center">
+        <button onClick={logoutFunc} class="btn btn-danger m-2">
+          Logout
+        </button>
+
+        <button
+          type="button"
+          class="btn btn btn-dark"
+          data-bs-toggle="popover"
+          title="Todo List"
+          data-bs-content="Welcome to Todo List Web Application"
+        >
+          {username ? "Welcome " + username : "Please Login"}{" "}
+        </button>
+      </div>
       <div className="row">
       <Routes>
         <Route
@@ -175,13 +190,13 @@ export default function App() {
             element={
               <div className="Home">
                 <Add createFunc={postNewTodo} />
-                <div class="btn-group">
-                  <button className='btn btn-primary my-3 mx-3' onClick={getData}>GET ALL TASKS</button>
-                  <button className='btn btn-danger my-3 mx-3' onClick={deleteTasks}>DELETE Completed tasks </button>
-                  <button className='btn btn-success my-3 mx-3' onClick={() => { filterData(true); }}> GET DONE </button>
-                  <button className='btn btn-dark my-3 mx-3' onClick={() => { filterData(false); }}> GET PENDING </button>
-                </div>
                 <h3 className='text-center bg-danger m-3 p-2'>TODO LIST</h3>
+                <div class="text-center m-3">
+                  <button className='btn btn-primary m-3' onClick={getData}>GET ALL TASKS</button>
+                  <button className='btn btn-danger m-3' onClick={deleteTasks}>DELETE Completed tasks </button>
+                  <button className='btn btn-info m-3' onClick={() => { filterData(true); }}> GET DONE </button>
+                  <button className='btn btn-dark m-3' onClick={() => { filterData(false); }}> GET PENDING </button>
+                </div>
                 <table className='table table-bordered table-striped'>
                   <thead>
                     <tr>

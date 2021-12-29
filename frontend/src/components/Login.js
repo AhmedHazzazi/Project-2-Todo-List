@@ -63,7 +63,6 @@ export default function Login(props) {
             type="email"
             className="form-control"
             id="floatingInput"
-            placeholder="name@example.com"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -76,7 +75,6 @@ export default function Login(props) {
             type="password"
             className="form-control"
             id="floatingPassword"
-            placeholder="Write password here ..."
             onChange={(e) => {
               setPassword(e.target.value);
             }}

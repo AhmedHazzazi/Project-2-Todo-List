@@ -12,7 +12,9 @@ export default function Todo(props) {
         <td>
           <span style={{ textDecoration: isCompleted ? 'line-through' : "none" }}>{title}</span></td>
         <td>
-          <button className='btn btn-danger mt-3' onClick={() => { props.deleteTodo(_id) }}>X</button>
+          <button className='btn btn-outline-danger m-3' onClick={() => { props.deleteTodo(_id) }}>
+            <i className='bi bi-trash-fill'></i>
+          </button>
         </td>
       </tr>
     </tbody>
