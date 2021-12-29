@@ -237,7 +237,7 @@ app.post("/users/register", (req, res) => {
   User.create(req.body, (err, newUser) => {
     if (err) {
       // console.log("ERROR: ", err);
-      res.status(400).json({ message: "This email already taken" });
+      res.status(400).json({ message: "This Email Already Taken" });
     } else {
       // res.status(201).json(newUser);
       res.status(201).json({ message: "Create New User Successfully" });
@@ -262,12 +262,12 @@ app.post("/users/login", (req, res) => {
         } else {
           // password incorrect
           res.status(400).json({
-            message: "Wrong password",
+            message: "Wrong Password",
           });
         }
       } else {
         res.status(404).json({
-          message: "The email entered is not registered",
+          message: "The Email Entered Is Not Registered",
         });
       }
     }
