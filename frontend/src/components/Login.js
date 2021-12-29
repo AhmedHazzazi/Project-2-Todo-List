@@ -37,7 +37,7 @@ export default function Login(props) {
   return (
     <div className="m-3 Login d-flex justify-content-center">
       <form className="d-grid gap-3">
-      <h3 className='text-center bg-info p-2'>Login</h3>
+        <h3 className='text-center bg-info p-2'>Login</h3>
         <div className="form-floating">
           <input
             type="email"
@@ -50,7 +50,7 @@ export default function Login(props) {
           />
           <label htmlFor="floatingInput">Email address</label>
         </div>
-        <div className="mb-3 form-floating">
+        <div className="form-floating mb-3">
           <input
             type="password"
             className="form-control"
@@ -73,16 +73,14 @@ export default function Login(props) {
             {loginMessage}
           </div>
         )}
-        <div className="text-center">
+        <div className="text-center m-3">
           <input
             type="submit"
             value="Login"
             onClick={loginFunc}
             className="btn btn-primary"
           />
-          <Link to="/Register" className="btn btn-link">
-            Don't Have An Account?
-          </Link>
+          <Link to="/Register" className="btn btn-link"> Don't Have An Account? </Link>
         </div>
       </form>
     </div>
