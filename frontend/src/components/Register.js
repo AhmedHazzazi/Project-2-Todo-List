@@ -29,7 +29,7 @@ export default function Register() {
 
   return (
     <div className="m-3 Login d-flex justify-content-center">
-      <form action="" className="text-center">
+      <form action="" className="d-grid gap-3">
         <h3 className='text-center bg-success p-2'>Register</h3>
         <div className="form-floating mb-3">
           <input id="email" className="form-control" type="email" onChange={(e) => { setEmail(e.target.value); }} value={email} />
