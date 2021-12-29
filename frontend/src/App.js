@@ -190,14 +190,14 @@ export default function App() {
             element={
               <div className="Home">
                 <Add createFunc={postNewTodo} />
-                <h3 className='text-center bg-danger m-3 p-2'>TODO LIST</h3>
+                <h3 className='text-center bg-info m-3 p-2'>TODO LIST</h3>
                 <div class="text-center m-3">
                   <button className='btn btn-primary m-3' onClick={getData}>GET ALL TASKS</button>
                   <button className='btn btn-danger m-3' onClick={deleteTasks}>DELETE Completed tasks </button>
-                  <button className='btn btn-info m-3' onClick={() => { filterData(true); }}> GET DONE </button>
+                  <button className='btn btn-secondary m-3' onClick={() => { filterData(true); }}> GET DONE </button>
                   <button className='btn btn-dark m-3' onClick={() => { filterData(false); }}> GET PENDING </button>
                 </div>
-                <table className='table table-bordered table-striped'>
+                <table className='table table-bordered table-striped m-3'>
                   <thead>
                     <tr>
                       <th>IsCompleted</th>

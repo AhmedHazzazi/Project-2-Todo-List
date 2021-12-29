@@ -12,9 +12,9 @@ export default function Add(props) {
   };
 
   return (
-    <div className="Add">
-      <h3 className='text-center bg-primary m-3 p-2'>ADD TODO</h3>
-      <form className="m-3">
+    <div className="m-3">
+      <h3 className='text-center bg-primary p-2'>ADD TODO</h3>
+      <form>
         <div className="form-floating mb-3">
           <input id="floatingInput" type="text" className="form-control" onChange={(e) => { setNewTitle(e.target.value); }} />
           <label htmlFor="floatingInput">New Todo Title</label>
